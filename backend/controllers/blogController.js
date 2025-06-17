@@ -1,6 +1,6 @@
 const BlogPost = require("../models/BlogPost");
 
-// Create Blog (Auto-publish)
+
 const createBlog = async (req, res) => {
   const { title, content, tags, image } = req.body;
   const authorId = req.userId;
@@ -12,7 +12,7 @@ const createBlog = async (req, res) => {
       tags,
       image,
       author: authorId,
-      status: "published" // ✅ Directly set blog status to "published"
+      status: "published" 
     });
 
     await newBlog.save();
@@ -23,7 +23,6 @@ const createBlog = async (req, res) => {
   }
 };
 
-// Publish Blog (Optional if you want to control status manually)
 const publishBlog = async (req, res) => {
   const blogId = req.params.id;
   const userId = req.userId;
@@ -49,7 +48,7 @@ const publishBlog = async (req, res) => {
   }
 };
 
-// Get all published blogs
+
 const getAllBlogs = async (req, res) => {
   try {
     const blogs = await BlogPost.find({ status: "published" }).populate("author", "name");
@@ -60,7 +59,7 @@ const getAllBlogs = async (req, res) => {
   }
 };
 
-// Get blog by ID
+
 const getBlogById = async (req, res) => {
   const { id } = req.params;
 
