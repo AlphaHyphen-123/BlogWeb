@@ -1,6 +1,5 @@
 import React from 'react';
-import img from '../assets/img.jpeg'; // Make sure the path is correct
-//import './HeroSection.css'; // Optional for extra styles
+import img from '../assets/img.jpeg'; 
 
 function HeroSection() {
   return (

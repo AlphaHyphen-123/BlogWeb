@@ -6,16 +6,16 @@ function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
   const navigate = useNavigate();
 
-  // Listen to storage changes or manual login updates
+  
   useEffect(() => {
     const handleStorageChange = () => {
       setIsLoggedIn(!!localStorage.getItem('token'));
     };
 
-    // Optional: run this when component mounts
+    
     handleStorageChange();
 
-    // Optional: for multi-tab support
+    
     window.addEventListener('storage', handleStorageChange);
 
     return () => {

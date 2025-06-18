@@ -9,7 +9,7 @@ import Signup from './component/Signup';
 import GetAllBlogs from './component/GetAllBlogs';
 import BlogDetails from './component/BlogDetails';
 import CreateBlog from './component/CreateBlog';
-import PrivateRoute from './component/PrivateRoute'; // ✅ Make sure this path is correct
+import PrivateRoute from './component/PrivateRoute'; 
 
 function Home() {
   return <HeroSection />;
@@ -35,7 +35,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
 
-          {/* ✅ Protected Routes */}
+          
           <Route path="/create-blog" element={
             <PrivateRoute>
               <CreateBlog />

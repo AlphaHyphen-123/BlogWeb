@@ -25,10 +25,10 @@ function Login() {
       console.log('Server response:', data);
 
       if (res.ok) {
-        // ✅ Store token
+        
         
 localStorage.setItem("token", data.token);
-window.dispatchEvent(new Event("storage")); // notify others
+window.dispatchEvent(new Event("storage")); 
 alert("login Successful");
 navigate('/');
 

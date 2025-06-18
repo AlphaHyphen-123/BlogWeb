@@ -10,17 +10,17 @@ const {
 
 const verifyToken = require("../middleware/verifyToken");
 
-// Get all published blogs
+
 router.get("/", getAllBlogs);
 
-// Get blog by ID
-router.get("/:id", getBlogById); // ✅ Correct
+
+router.get("/:id", getBlogById); 
 
 
-// Create a new blog (only for logged-in users)
+
 router.post("/create", verifyToken, createBlog);
 
-// Publish a blog by ID (only author)
+
 router.put("/publish/:id", verifyToken, publishBlog);
 
 module.exports = router;
