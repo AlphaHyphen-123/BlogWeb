@@ -7,7 +7,7 @@ function GetAllBlogs() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:4020/api/blog')
+    axios.get('/api/blog')
       .then(res => {
         setBlogs(res.data);
         setLoading(false);

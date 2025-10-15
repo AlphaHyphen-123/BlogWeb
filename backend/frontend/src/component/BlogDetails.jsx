@@ -8,7 +8,7 @@ function BlogDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:4020/api/blog/${id}`)
+    axios.get(`/api/blog/${id}`)
       .then(res => {
         setBlog(res.data);
         setLoading(false);

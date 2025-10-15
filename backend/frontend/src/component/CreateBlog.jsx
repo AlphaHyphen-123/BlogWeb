@@ -35,7 +35,7 @@ function CreateBlog() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:4020/api/blog/create', {
+      const response = await axios.post('/api/blog/create', {
         ...formData,
         tags: formData.tags.split(',').map(tag => tag.trim())
       }, {

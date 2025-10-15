@@ -19,7 +19,7 @@ function Footer() {
         </div>
 
         <p className="mb-0">
-          Made with ❤️ by <a href="https://github.com/adityakumar" className="text-info text-decoration-none">Aditya Kumar</a>
+          Made with ❤️ by <a href="https://github.com/AlphaHyphen-123" className="text-info text-decoration-none">Aditya Kumar</a>
         </p>
       </div>
     </footer>
