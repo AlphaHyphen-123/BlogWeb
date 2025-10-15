@@ -1,0 +1,13 @@
+/* Nav.css */
+.bg-custom {
+  background-color: #4B0082 !important; /* Indigo Purple */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: #FFD700 !important; /* Gold on hover */
+}
