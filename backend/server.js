@@ -24,24 +24,24 @@ app.use("/api/blog", blogRoutes);
 // deployment
 
 // deployment - USE THIS
-if (process.env.NODE_ENV === "production") {
-  try {
-    console.log("🚀 Production mode activated");
-    const dirPath = path.resolve();
+// if (process.env.NODE_ENV === "production") {
+//   try {
+//     console.log("🚀 Production mode activated");
+//     const dirPath = path.resolve();
     
-    // Serve static files
-    app.use(express.static(path.join(dirPath, "frontend/dist")));
+//     // Serve static files
+//     app.use(express.static(path.join(dirPath, "frontend/dist")));
     
-    // ✅ FIXED: Regex-based catch-all route
-    app.get(/\/(.*)/, (req, res) => {
-      res.sendFile(path.join(dirPath, "frontend/dist/index.html"));
-    });
+//     // ✅ FIXED: Regex-based catch-all route
+//     app.get(/\/(.*)/, (req, res) => {
+//       res.sendFile(path.join(dirPath, "frontend/dist/index.html"));
+//     });
     
-    console.log("✅ SPA routing configured");
-  } catch (error) {
-    console.error("❌ Production setup failed:", error.message);
-  }
-}
+//     console.log("✅ SPA routing configured");
+//   } catch (error) {
+//     console.error("❌ Production setup failed:", error.message);
+//   }
+// }
 const PORT = process.env.PORT || 8090;
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
