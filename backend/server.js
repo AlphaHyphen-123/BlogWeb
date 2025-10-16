@@ -11,12 +11,12 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
-app.use(cors({
-  origin: '*',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: '*',
+//   credentials: true
+// }));
 
 app.use("/api", userRoutes);
 app.use("/api/blog", blogRoutes);
